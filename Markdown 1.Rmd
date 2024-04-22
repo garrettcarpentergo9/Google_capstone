@@ -28,3 +28,808 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+R version 4.3.3 (2024-02-29 ucrt) -- "Angel Food Cake"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(readr)
+> X202403_divvy_tripdata <- read_csv("C:/Users/garre/Downloads/202403-divvy-tripdata.zip")
+Multiple files in zip: reading '202403-divvy-tripdata.csv'
+Rows: 301687 Columns: 13                           
+── Column specification ─────────────────────────────
+Delimiter: ","
+chr  (7): ride_id, rideable_type, start_station_n...
+dbl  (4): start_lat, start_lng, end_lat, end_lng
+dttm (2): started_at, ended_at
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> View(X202403_divvy_tripdata)
+> library(readr)
+> X202402_divvy_tripdata <- read_csv("C:/Users/garre/Downloads/202402-divvy-tripdata.zip")
+Multiple files in zip: reading '202402-divvy-tripdata.csv'
+Rows: 223164 Columns: 13                           
+── Column specification ─────────────────────────────
+Delimiter: ","
+chr  (7): ride_id, rideable_type, start_station_n...
+dbl  (4): start_lat, start_lng, end_lat, end_lng
+dttm (2): started_at, ended_at
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> View(X202402_divvy_tripdata)
+> library(readr)
+> X202309_divvy_tripdata <- read_csv("C:/Users/garre/Downloads/202309-divvy-tripdata.zip")
+Multiple files in zip: reading '202309-divvy-tripdata.csv'
+Rows: 666371 Columns: 13                           
+── Column specification ─────────────────────────────
+Delimiter: ","
+chr  (7): ride_id, rideable_type, start_station_n...
+dbl  (4): start_lat, start_lng, end_lat, end_lng
+dttm (2): started_at, ended_at
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> View(X202309_divvy_tripdata)
+> library(readr)
+> X202310_divvy_tripdata <- read_csv("C:/Users/garre/Downloads/202310-divvy-tripdata.zip")
+Multiple files in zip: reading '202310-divvy-tripdata.csv'
+Rows: 537113 Columns: 13                           
+── Column specification ─────────────────────────────
+Delimiter: ","
+chr  (7): ride_id, rideable_type, start_station_n...
+dbl  (4): start_lat, start_lng, end_lat, end_lng
+dttm (2): started_at, ended_at
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> View(X202310_divvy_tripdata)
+> library(readr)
+> X202307_divvy_tripdata <- read_csv("C:/Users/garre/Downloads/202307-divvy-tripdata.zip")
+Multiple files in zip: reading '202307-divvy-tripdata.csv'
+Rows: 767650 Columns: 13                           
+── Column specification ─────────────────────────────
+Delimiter: ","
+chr  (7): ride_id, rideable_type, start_station_n...
+dbl  (4): start_lat, start_lng, end_lat, end_lng
+dttm (2): started_at, ended_at
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> View(X202307_divvy_tripdata)
+> library(readr)
+> X202308_divvy_tripdata <- read_csv("C:/Users/garre/Downloads/202308-divvy-tripdata.zip")
+Multiple files in zip: reading '202308-divvy-tripdata.csv'
+Rows: 771693 Columns: 13                           
+── Column specification ─────────────────────────────
+Delimiter: ","
+chr  (7): ride_id, rideable_type, start_station_n...
+dbl  (4): start_lat, start_lng, end_lat, end_lng
+dttm (2): started_at, ended_at
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> View(X202308_divvy_tripdata)
+> library(readr)
+> X202311_divvy_tripdata <- read_csv("C:/Users/garre/Downloads/202311-divvy-tripdata.zip")
+Multiple files in zip: reading '202311-divvy-tripdata.csv'
+Rows: 362518 Columns: 13                           
+── Column specification ─────────────────────────────
+Delimiter: ","
+chr  (7): ride_id, rideable_type, start_station_n...
+dbl  (4): start_lat, start_lng, end_lat, end_lng
+dttm (2): started_at, ended_at
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> View(X202311_divvy_tripdata)
+> library(readr)
+> X202312_divvy_tripdata <- read_csv("C:/Users/garre/Downloads/202312-divvy-tripdata.zip")
+Multiple files in zip: reading '202312-divvy-tripdata.csv'
+Rows: 224073 Columns: 13                           
+── Column specification ─────────────────────────────
+Delimiter: ","
+chr  (7): ride_id, rideable_type, start_station_n...
+dbl  (4): start_lat, start_lng, end_lat, end_lng
+dttm (2): started_at, ended_at
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> View(X202312_divvy_tripdata)
+> library(readr)
+> X202401_divvy_tripdata <- read_csv("C:/Users/garre/Downloads/202401-divvy-tripdata.zip")
+Multiple files in zip: reading '202401-divvy-tripdata.csv'
+Rows: 144873 Columns: 13                           
+── Column specification ─────────────────────────────
+Delimiter: ","
+chr  (7): ride_id, rideable_type, start_station_n...
+dbl  (4): start_lat, start_lng, end_lat, end_lng
+dttm (2): started_at, ended_at
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> View(X202401_divvy_tripdata)
+> library(readr)
+> X202306_divvy_tripdata <- read_csv("C:/Users/garre/Downloads/202306-divvy-tripdata.zip")
+Multiple files in zip: reading '202306-divvy-tripdata.csv'
+Rows: 719618 Columns: 13                           
+── Column specification ─────────────────────────────
+Delimiter: ","
+chr  (7): ride_id, rideable_type, start_station_n...
+dbl  (4): start_lat, start_lng, end_lat, end_lng
+dttm (2): started_at, ended_at
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> View(X202306_divvy_tripdata)
+> library(readr)
+> X202305_divvy_tripdata <- read_csv("C:/Users/garre/Downloads/202305-divvy-tripdata.zip")
+Multiple files in zip: reading '202305-divvy-tripdata.csv'
+Rows: 604827 Columns: 13                           
+── Column specification ─────────────────────────────
+Delimiter: ","
+chr  (7): ride_id, rideable_type, start_station_n...
+dbl  (4): start_lat, start_lng, end_lat, end_lng
+dttm (2): started_at, ended_at
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> View(X202305_divvy_tripdata)
+> library(readr)
+> X202304_divvy_tripdata <- read_csv("C:/Users/garre/Downloads/202304-divvy-tripdata.zip")
+Multiple files in zip: reading '202304-divvy-tripdata.csv'
+Rows: 426590 Columns: 13                           
+── Column specification ─────────────────────────────
+Delimiter: ","
+chr  (7): ride_id, rideable_type, start_station_n...
+dbl  (4): start_lat, start_lng, end_lat, end_lng
+dttm (2): started_at, ended_at
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> View(X202304_divvy_tripdata)
+> install.packages("dplyr")
+WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/garre/AppData/Local/R/win-library/4.3’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.3/dplyr_1.1.4.zip'
+Content type 'application/zip' length 1559541 bytes (1.5 MB)
+downloaded 1.5 MB
+
+package ‘dplyr’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\garre\AppData\Local\Temp\Rtmpqof2c1\downloaded_packages
+> library(dplyr)
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+> install.packages("tidyverse")
+WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/garre/AppData/Local/R/win-library/4.3’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.3/tidyverse_2.0.0.zip'
+Content type 'application/zip' length 430818 bytes (420 KB)
+downloaded 420 KB
+
+package ‘tidyverse’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\garre\AppData\Local\Temp\Rtmpqof2c1\downloaded_packages
+> library(tidyverse)
+── Attaching core tidyverse packages ────────────────
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.0     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ─────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package to force all conflicts to become errors
+> install.packages("lubridate")
+Error in install.packages : Updating loaded packages
+
+Restarting R session...
+
+> library(lubridate)
+
+Attaching package: ‘lubridate’
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+> install.packages("hms")
+WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/garre/AppData/Local/R/win-library/4.3’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.3/hms_1.1.3.zip'
+Content type 'application/zip' length 104226 bytes (101 KB)
+downloaded 101 KB
+
+package ‘hms’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\garre\AppData\Local\Temp\RtmpCWwTug\downloaded_packages
+> library(hms)
+
+Attaching package: ‘hms’
+
+The following object is masked from ‘package:lubridate’:
+
+    hms
+
+> install.packages("data.table")
+WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/garre/AppData/Local/R/win-library/4.3’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.3/data.table_1.15.4.zip'
+Content type 'application/zip' length 2388165 bytes (2.3 MB)
+downloaded 2.3 MB
+
+package ‘data.table’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\garre\AppData\Local\Temp\RtmpCWwTug\downloaded_packages
+> library(data.table)
+data.table 1.15.4 using 8 threads (see ?getDTthreads).  Latest news: r-datatable.com
+
+Attaching package: ‘data.table’
+
+The following objects are masked from ‘package:lubridate’:
+
+    hour, isoweek, mday, minute, month,
+    quarter, second, wday, week, yday, year
+
+> Cyclistic_Year<- rbind(X202304_divvy_tripdata,X202305_divvy_tripdata,X202306_divvy_tripdata,X202307_divvy_tripdata,X202308_divvy_tripdata,X202309_divvy_tripdata,X202310_divvy_tripdata,X202311_divvy_tripdata,X202312_divvy_tripdata,X202401_divvy_tripdata,X202402_divvy_tripdata,X202403_divvy_tripdata)
+> #remove individual months
+> remove(X202304_divvy_tripdata,X202305_divvy_tripdata,X202306_divvy_tripdata,X202307_divvy_tripdata,X202308_divvy_tripdata,X202309_divvy_tripdata,X202310_divvy_tripdata,X202311_divvy_tripdata,X202312_divvy_tripdata,X202401_divvy_tripdata,X202402_divvy_tripdata,X202403_divvy_tripdata)
+> #create new frame to contain new rows
+> Cyclistic_Date<-Cyclistic_Year
+> #calculate ride length by subtracting ended_at from started_at and convert value to minutes
+> Cyclistic_Date$ride_length <-difftime(Cyclistic_Year$ended_at,Cyclistic_Year$started_at,units="mins")
+> View(Cyclistic_Date)
+> #create columns for day_of_week, month, day, year, time, and hour
+> Cyclistic_Date$date <-as.Date(Cyclistic_Date$started_at)
+> Cyclistic_Date$day_of_week<-wday(Cyclistic_Year$started_at)
+> Cyclistic_Date$day_of_week<-format(as.Date(Cyclistic_Date$date),"%A")
+> Cyclistic_Date$month<-format(as.Date(Cyclistic_Date$date),"%m")
+> Cyclistic_Date$day<-format(as.Date(Cyclistic_Date$date),"%d")
+> Cyclistic_Date$year<-format(as.Date(Cyclistic_Date$date),"%Y")
+> Cyclistic_Date$time<-format(as.Date(Cyclistic_Date$date),"%H:%M:%S")
+> Cyclistic_Date$time<-as_hms((Cyclistic_Year$started_at))
+> Cyclistic_Date$hour<-hour(Cyclistic_Date$time)
+> #create different column for different seasons:spring, summer, fall, winter
+> Cyclistic_Date<-Cyclistic_Date%>% mutate(season=case_when(month=="03"~"Spring",month=="04"~"Spring",month=="05"~"Spring",month=="06"~"Summer",month=="07"~"Summer",month=="08"~"Summer",month=="09"~"Fall",month=="10"~"Fall",month=="11"~"Fall",month=="12"~"Winter",month=="01"~"Winter",month=="02"~"Winter"))
+Error in Cyclistic_Date %>% mutate(season = case_when(month == "03" ~  : 
+  could not find function "%>%"
+> install.packages("dplyr")
+WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/garre/AppData/Local/R/win-library/4.3’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.3/dplyr_1.1.4.zip'
+Content type 'application/zip' length 1559541 bytes (1.5 MB)
+downloaded 1.5 MB
+
+package ‘dplyr’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\garre\AppData\Local\Temp\RtmpCWwTug\downloaded_packages
+> library(dplyr)
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+> Cyclistic_Date<-Cyclistic_Date%>% mutate(season=case_when(month=="03"~"Spring",month=="04"~"Spring",month=="05"~"Spring",month=="06"~"Summer",month=="07"~"Summer",month=="08"~"Summer",month=="09"~"Fall",month=="10"~"Fall",month=="11"~"Fall",month=="12"~"Winter",month=="01"~"Winter",month=="02"~"Winter"))
+> #create column for different time_of_day:Night,Morning,Afternoon,Evening
+> Cyclistic_Date<-Cyclistic_Date %>% mutate(time_of_day=case_when(hour=="0"~"Night",hour=="1"~"Night",hour=="2"~"Night",hour=="3"~"Night",hour=="4"~"Night",hour=="5"~"Night",hour=="6"~"Morning",hour=="7"~"Morning",hour=="8"~"Morning",hour=="9"~"Morning",hour=="10"~"Morning",hour=="11"~"Morning",hour=="12"~"Afternoon",hour=="13"~"Afternoon",hour=="14"~"Afternoon",hour=="15"~"Afternoon",hour=="16"~"Afternoon",hour=="17"~"Afternoon",hour=="18"~"Evening",hour=="19"~"Evening",hour=="20"~"Evening",hour=="21"~"Evening",hour=="22"~"Evening",hour=="23"~"Evening"))
+> #Clean data
+> Cyclistic_Date<-na.omit(Cyclistic_Date)
+> #remove NA values
+> Cyclistic_Date<-distinct(Cyclistic_Date)
+> #remove duplicates
+> Cyclistic_Date<-Cyclistic_Date[!(Cyclistic_Date$ride_length<=0),]
+> #remove when ride is 0 or negative
+> #remove uneeded columns
+> Cyclistic_Date<-Cyclistic_Date%>% select(-c(ride_id,start_station_id,end_station_id,start_lat,start_lng,end_lat,end_lng))
+> View(Cyclistic_Date)
+> # total number of rides
+> nrow(Cyclistic_Date)
+[1] 4361619
+> #member type
+> Cyclistic_Date %>% group_by(member_casual) %>% count(member_casual)
+# A tibble: 2 × 2
+# Groups:   member_casual [2]
+  member_casual       n
+  <chr>           <int>
+1 casual        1541033
+2 member        2820586
+> #type of bike
+> #total rides by member type
+> Cyclistic_Date %>% group_by(member_casual,rideable_type) %>% count(rideable_type)
+# A tibble: 5 × 3
+# Groups:   member_casual, rideable_type [5]
+  member_casual rideable_type       n
+  <chr>         <chr>           <int>
+1 casual        classic_bike   901495
+2 casual        docked_bike     69347
+3 casual        electric_bike  570191
+4 member        classic_bike  1866532
+5 member        electric_bike  954054
+> #total rides
+> Cyclistic_Date %>% group_by(rideable_type) %>% count(rideable_type)
+# A tibble: 3 × 2
+# Groups:   rideable_type [3]
+  rideable_type       n
+  <chr>           <int>
+1 classic_bike  2768027
+2 docked_bike     69347
+3 electric_bike 1524245
+> #rides by member type
+> Cyclistic_Date %>% group_by(member_casual) %>% print(n=48)
+# A tibble: 4,361,619 × 16
+# Groups:   member_casual [2]
+   rideable_type started_at         
+   <chr>         <dttm>             
+ 1 classic_bike  2023-04-10 17:34:35
+ 2 classic_bike  2023-04-12 12:29:46
+ 3 electric_bike 2023-04-13 17:39:23
+ 4 classic_bike  2023-04-29 20:57:10
+ 5 classic_bike  2023-04-20 17:03:11
+ 6 electric_bike 2023-04-14 22:29:12
+ 7 classic_bike  2023-04-07 21:14:14
+ 8 classic_bike  2023-04-05 11:04:02
+ 9 classic_bike  2023-04-05 11:44:33
+10 electric_bike 2023-04-24 12:44:02
+11 classic_bike  2023-04-22 12:16:56
+12 electric_bike 2023-04-11 15:16:42
+13 electric_bike 2023-04-02 11:02:32
+14 classic_bike  2023-04-05 16:33:46
+15 classic_bike  2023-04-25 16:16:33
+16 electric_bike 2023-04-09 18:39:12
+17 classic_bike  2023-04-10 14:37:54
+18 classic_bike  2023-04-09 15:06:35
+19 classic_bike  2023-04-07 19:15:37
+20 classic_bike  2023-04-07 19:14:51
+21 classic_bike  2023-04-10 19:45:25
+22 classic_bike  2023-04-29 16:56:27
+23 electric_bike 2023-04-11 13:49:18
+24 electric_bike 2023-04-11 08:55:56
+25 electric_bike 2023-04-12 19:53:23
+26 classic_bike  2023-04-13 10:42:23
+27 classic_bike  2023-04-15 20:54:22
+28 classic_bike  2023-04-15 13:29:02
+29 classic_bike  2023-04-14 20:06:59
+30 electric_bike 2023-04-15 10:27:45
+31 electric_bike 2023-04-11 19:49:27
+32 electric_bike 2023-04-12 13:12:50
+33 electric_bike 2023-04-11 16:42:33
+34 classic_bike  2023-04-27 15:50:25
+35 classic_bike  2023-04-02 15:37:03
+36 electric_bike 2023-04-08 04:08:44
+37 classic_bike  2023-04-11 12:52:28
+38 electric_bike 2023-04-27 10:22:30
+39 classic_bike  2023-04-13 13:04:10
+40 electric_bike 2023-04-17 17:08:25
+41 electric_bike 2023-04-17 17:07:14
+42 classic_bike  2023-04-02 11:42:55
+43 electric_bike 2023-04-20 18:30:40
+44 electric_bike 2023-04-29 10:53:54
+45 electric_bike 2023-04-16 09:02:16
+46 classic_bike  2023-04-28 17:02:06
+47 classic_bike  2023-04-25 19:14:51
+48 classic_bike  2023-04-14 15:29:20
+# ℹ 4,361,571 more rows
+# ℹ 14 more variables: ended_at <dttm>,
+#   start_station_name <chr>,
+#   end_station_name <chr>, member_casual <chr>,
+#   ride_length <drtn>, date <date>,
+#   day_of_week <chr>, month <chr>, day <chr>,
+#   year <chr>, time <time>, hour <int>, …
+# ℹ Use `print(n = ...)` to see more rows
+> #total rides
+> Cyclistic_Date %>% count(hour)%>% print(n=24)
+# A tibble: 24 × 2
+    hour      n
+   <int>  <int>
+ 1     0  48476
+ 2     1  29518
+ 3     2  16442
+ 4     3   9517
+ 5     4   9566
+ 6     5  34996
+ 7     6 106239
+ 8     7 197382
+ 9     8 248771
+10     9 181573
+11    10 182541
+12    11 221401
+13    12 256171
+14    13 258648
+15    14 265003
+16    15 312700
+17    16 402164
+18    17 458885
+19    18 362695
+20    19 256322
+21    20 179166
+22    21 140064
+23    22 110094
+24    23  73285
+> #time of day
+> #morning
+> #total rides by member type
+> Cyclistic_Date %>% group_by(member_casual) %>% filter(time_of_day=="Morning")%>% count(time_of_day)
+# A tibble: 2 × 3
+# Groups:   member_casual [2]
+  member_casual time_of_day      n
+  <chr>         <chr>        <int>
+1 casual        Morning     320059
+2 member        Morning     817848
+> #total rides
+> Cyclistic_Date %>% filter(time_of_day =="Morning")%>% count(time_of_day)
+# A tibble: 1 × 2
+  time_of_day       n
+  <chr>         <int>
+1 Morning     1137907
+> #afternoon
+> #total rides by member type
+> Cyclistic_Date %>% group_by(member_casual)%>% filter(time_of_day=="Afternoon") %>% count(time_of_day)
+# A tibble: 2 × 3
+# Groups:   member_casual [2]
+  member_casual time_of_day       n
+  <chr>         <chr>         <int>
+1 casual        Afternoon    730443
+2 member        Afternoon   1223128
+> #total rides
+> Cyclistic_Date %>% filter(time_of_day=="Afternoon") %>% count(time_of_day)
+# A tibble: 1 × 2
+  time_of_day       n
+  <chr>         <int>
+1 Afternoon   1953571
+> #Evening
+> #total rides by member type
+> Cyclistic_Date %>% group_by(member_casual)%>% filter(time_of_day=="Evening")%>%count(time_of_day)
+# A tibble: 2 × 3
+# Groups:   member_casual [2]
+  member_casual time_of_day      n
+  <chr>         <chr>        <int>
+1 casual        Evening     423973
+2 member        Evening     697653
+> #total rides
+> Cyclistic_Date %>% filter(time_of_day=="Afternoon")%>% count(time_of_day)
+# A tibble: 1 × 2
+  time_of_day       n
+  <chr>         <int>
+1 Afternoon   1953571
+> #Night
+> #number of rides by member type
+> Cyclistic_Date %>% group_by(member_casual) %>% filter(time_of_day=="Night")%>% count(time_of_day)
+# A tibble: 2 × 3
+# Groups:   member_casual [2]
+  member_casual time_of_day     n
+  <chr>         <chr>       <int>
+1 casual        Night       66558
+2 member        Night       81957
+> #total rides
+> Cyclistic_Date %>% filter(time_of_day=="Night")%>% count(time_of_day)
+# A tibble: 1 × 2
+  time_of_day      n
+  <chr>        <int>
+1 Night       148515
+> #all times of the day
+> #total rides by member type
+> Cyclistic_Date %>% group_by(member_casual)%>% count(time_of_day)
+# A tibble: 8 × 3
+# Groups:   member_casual [2]
+  member_casual time_of_day       n
+  <chr>         <chr>         <int>
+1 casual        Afternoon    730443
+2 casual        Evening      423973
+3 casual        Morning      320059
+4 casual        Night         66558
+5 member        Afternoon   1223128
+6 member        Evening      697653
+7 member        Morning      817848
+8 member        Night         81957
+> #number of rides
+> Cyclistic_Date %>% group_by(time_of_day) %>% count(time_of_day)
+# A tibble: 4 × 2
+# Groups:   time_of_day [4]
+  time_of_day       n
+  <chr>         <int>
+1 Afternoon   1953571
+2 Evening     1121626
+3 Morning     1137907
+4 Night        148515
+> #Day of week
+> #total rides by member type
+> Cyclistic_Date %>% group_by(member_casual) %>% count(day_of_week)
+# A tibble: 14 × 3
+# Groups:   member_casual [2]
+   member_casual day_of_week      n
+   <chr>         <chr>        <int>
+ 1 casual        Friday      229123
+ 2 casual        Monday      177032
+ 3 casual        Saturday    316447
+ 4 casual        Sunday      255504
+ 5 casual        Thursday    200807
+ 6 casual        Tuesday     180433
+ 7 casual        Wednesday   181687
+ 8 member        Friday      400452
+ 9 member        Monday      392367
+10 member        Saturday    356621
+11 member        Sunday      307270
+12 member        Thursday    463289
+13 member        Tuesday     444920
+14 member        Wednesday   455667
+> #total rides
+> Cyclistic_Date %>% count(day_of_week)
+# A tibble: 7 × 2
+  day_of_week      n
+  <chr>        <int>
+1 Friday      629575
+2 Monday      569399
+3 Saturday    673068
+4 Sunday      562774
+5 Thursday    664096
+6 Tuesday     625353
+7 Wednesday   637354
+> #by month
+> # total rides by member type
+> Cyclistic_Date %>% group_by(member_casual) %>% count(day)%>% print(n=62)
+# A tibble: 62 × 3
+# Groups:   member_casual [2]
+   member_casual day        n
+   <chr>         <chr>  <int>
+ 1 casual        01     48010
+ 2 casual        02     52243
+ 3 casual        03     64571
+ 4 casual        04     65110
+ 5 casual        05     43790
+ 6 casual        06     46393
+ 7 casual        07     53545
+ 8 casual        08     49572
+ 9 casual        09     61236
+10 casual        10     58530
+11 casual        11     43644
+12 casual        12     48497
+13 casual        13     44661
+14 casual        14     41580
+15 casual        15     59372
+16 casual        16     53012
+17 casual        17     44306
+18 casual        18     48932
+19 casual        19     47679
+20 casual        20     53321
+21 casual        21     54346
+22 casual        22     49091
+23 casual        23     54207
+24 casual        24     50186
+25 casual        25     42840
+26 casual        26     42038
+27 casual        27     48642
+28 casual        28     45466
+29 casual        29     52202
+30 casual        30     51083
+31 casual        31     22928
+32 member        01     84856
+33 member        02     90160
+34 member        03     97136
+35 member        04     97951
+36 member        05     91748
+37 member        06     95837
+38 member        07    102209
+39 member        08     91996
+40 member        09     98839
+41 member        10     99975
+42 member        11     92547
+43 member        12     95517
+44 member        13     93601
+45 member        14     87192
+46 member        15     98389
+47 member        16     87841
+48 member        17     82579
+49 member        18     97183
+50 member        19     91345
+51 member        20     99845
+52 member        21     98554
+53 member        22     88726
+54 member        23     85403
+55 member        24     86285
+56 member        25     85790
+57 member        26     88925
+58 member        27     95399
+59 member        28     87583
+60 member        29     87544
+61 member        30     87810
+62 member        31     51821
+> #total rides
+> Cyclistic_Date %>% count(day) %>% print(n=31)
+# A tibble: 31 × 2
+   day        n
+   <chr>  <int>
+ 1 01    132866
+ 2 02    142403
+ 3 03    161707
+ 4 04    163061
+ 5 05    135538
+ 6 06    142230
+ 7 07    155754
+ 8 08    141568
+ 9 09    160075
+10 10    158505
+11 11    136191
+12 12    144014
+13 13    138262
+14 14    128772
+15 15    157761
+16 16    140853
+17 17    126885
+18 18    146115
+19 19    139024
+20 20    153166
+21 21    152900
+22 22    137817
+23 23    139610
+24 24    136471
+25 25    128630
+26 26    130963
+27 27    144041
+28 28    133049
+29 29    139746
+30 30    138893
+31 31     74749
+> #month
+> #total rides by member type
+> Cyclistic_Date %>% group_by(member_casual)%>% count(month)%>% print(n=24)
+# A tibble: 24 × 3
+# Groups:   member_casual [2]
+   member_casual month      n
+   <chr>         <chr>  <int>
+ 1 casual        01     17712
+ 2 casual        02     38168
+ 3 casual        03     62801
+ 4 casual        04    110526
+ 5 casual        05    177025
+ 6 casual        06    219778
+ 7 casual        07    245254
+ 8 casual        08    233819
+ 9 casual        09    196938
+10 casual        10    130269
+11 casual        11     72061
+12 casual        12     36682
+13 member        01     96076
+14 member        02    146553
+15 member        03    167436
+16 member        04    213647
+17 member        05    286162
+18 member        06    314941
+19 member        07    328622
+20 member        08    351002
+21 member        09    309617
+22 member        10    273433
+23 member        11    202661
+24 member        12    130436
+> #total rides
+> Cyclistic_Date %>% count(month)
+# A tibble: 12 × 2
+   month      n
+   <chr>  <int>
+ 1 01    113788
+ 2 02    184721
+ 3 03    230237
+ 4 04    324173
+ 5 05    463187
+ 6 06    534719
+ 7 07    573876
+ 8 08    584821
+ 9 09    506555
+10 10    403702
+11 11    274722
+12 12    167118
+> #Season
+> #Spring
+> #by member type
+> Cyclistic_Date %>% group_by(member_casual) %>% filter(season=="Spring")%>% count(season)
+# A tibble: 2 × 3
+# Groups:   member_casual [2]
+  member_casual season      n
+  <chr>         <chr>   <int>
+1 casual        Spring 350352
+2 member        Spring 667245
+> #total rides
+> Cyclistic_Date %>% filter(season=="Spring") %>% count(season)
+# A tibble: 1 × 2
+  season       n
+  <chr>    <int>
+1 Spring 1017597
+> #summer
+> #by member type
+> Cyclistic_Date %>% group_by(member_casual) %>% filter(season=="Summer")%>%count(season)
+# A tibble: 2 × 3
+# Groups:   member_casual [2]
+  member_casual season      n
+  <chr>         <chr>   <int>
+1 casual        Summer 698851
+2 member        Summer 994565
+> #total rides
+> Cyclistic_Date %>% filter(season=="Summer")%>%count(season)
+# A tibble: 1 × 2
+  season       n
+  <chr>    <int>
+1 Summer 1693416
+> #Fall
+> #by member type
+> Cyclistic_Date %>% group_by(member_casual)%>% filter(season=="Fall")%>%count(season)
+# A tibble: 2 × 3
+# Groups:   member_casual [2]
+  member_casual season      n
+  <chr>         <chr>   <int>
+1 casual        Fall   399268
+2 member        Fall   785711
+> #total rides
+> Cyclistic_Date %>% filter(season=="Fall") %>% count(season)
+# A tibble: 1 × 2
+  season       n
+  <chr>    <int>
+1 Fall   1184979
+> #Winter
+> #by member type
+> Cyclistic_Date %>% group_by(member_casual)%>% filter(season=="Winter")%>% count(season)
+# A tibble: 2 × 3
+# Groups:   member_casual [2]
+  member_casual season      n
+  <chr>         <chr>   <int>
+1 casual        Winter  92562
+2 member        Winter 373065
+> #total rides
+> Cyclistic_Date %>% filter(season=="Winter") %>%count(season)
+# A tibble: 1 × 2
+  season      n
+  <chr>   <int>
+1 Winter 465627
